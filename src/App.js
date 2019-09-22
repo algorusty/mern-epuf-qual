@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Navbar from "./components/navbar.component";
+import EpufList from "./components/list.component";
+import EditEpuf from "./components/edit-epuf.component";
+import CreateEpuf from "./components/create-epuf.component";
+import CreateEpufID from "./components/create-epufID.component";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <Navbar />
+        <br/>
+        <Route path="/" exact component={EpufList}></Route>
+        <Route path="/edit/:id" component={EditEpuf}></Route>
+        <Route path="/create" component={CreateEpuf}></Route>
+        <Route path="/epuf" component={CreateEpufID}></Route>
+      </div>
+    </Router>
   );
 }
 

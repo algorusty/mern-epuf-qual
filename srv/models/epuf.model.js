@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const epufSchema = new Schema ({
-    epufID: {type: String, required: true, unique: true},
+    epufID: {type: String, required: true},
     startDate: {type: Date},
     endDate: {type: Date},
     update: {type: Number},
