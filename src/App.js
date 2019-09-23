@@ -17,7 +17,7 @@ function App() {
         <Route path="/" exact component={EpufList}></Route>
         <Route path="/edit/:id" component={EditEpuf}></Route>
         <Route path="/create" component={CreateEpuf}></Route>
-        <Route path="/epuf" component={CreateEpufID}></Route>
+        <Route path="/epufID" component={CreateEpufID}></Route>
       </div>
     </Router>
   );
